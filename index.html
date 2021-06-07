@@ -235,27 +235,34 @@ background-color:transparent;
   clear: both;
 }
 @media screen and (max-width: 700px) {
-  .contact-me-column {
+ /* .contact-me-column {
     width: auto;
     display: block;
     margin-left:auto;
 	margin-right:auto;
   }
-   .contact-me-row {  margin:0%;}
+	.contact-me-row {  margin:0}
 
-}
-
-@media screen and (min-width: 760px) {
-  .contact-me-column {
-    margin:2%;
-    display: block;
-    margin-left:0%;
 	
-  }
-   .contact-me-row {  margin:5%;}
+}*/
+.header-full {
+    display: grid;
+    grid-gap: 0;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 600px 600px 1fr;
 }
+.gen-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+	}
+
 </style>
 <body>
+	<div class="header-full">
 <div class="container d-flex justify-content-center align-items-center">
 	
 	<!-- // SVG
@@ -263,6 +270,7 @@ background-color:transparent;
   -------------------------------------------------------------
   -- Note: need to use inline svg to manipulate its components
   ------------------------------------------------------------>
+	 <div class="gen-flex">
    <div class="contact-me-row">
   <div class="contact-me-column">
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 663" fill="none"><!--viewBox = "min-x min-y width height"-->
@@ -560,7 +568,7 @@ background-color:transparent;
 					</g>
 			</g>
 	</svg>
-
+ <div class="gen-flex">
 <div class="container">
       <h1>Contact US</h1>
 <form method="post" action="//submit.form" onSubmit="return validateForm();">
