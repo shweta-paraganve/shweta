@@ -245,19 +245,20 @@ background-color:transparent;
 	
 }*/
 .header-full {
+	width:100%;
     display: grid;
     grid-gap: 0;
     height: 100vh;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 600px 600px 1fr;
+	grid-template-columns: repeat(1, 1fr);
 }
 .gen-flex {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-	.header-full { grid-template-columns: repeat(1, 1fr); }
-}
+	
 
 	}
 
