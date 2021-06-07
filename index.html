@@ -245,26 +245,22 @@ background-color:transparent;
 	
 }*/
 .header-full {
-	width:100%;
     display: grid;
     grid-gap: 0;
     height: 100vh;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 600px 600px 1fr;
-	grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas: 'gen-flex1'  'gen-flex2' 
 }
-.gen-flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-	
+
 
 	}
 
 </style>
 <body>
 	<div class="header-full">
+		<div class="gen-flex1">
 <div class="container d-flex justify-content-center align-items-center">
 	
 	<!-- // SVG
@@ -272,7 +268,7 @@ background-color:transparent;
   -------------------------------------------------------------
   -- Note: need to use inline svg to manipulate its components
   ------------------------------------------------------------>
-	 <div class="gen-flex">
+	 
    <div class="contact-me-row">
   <div class="contact-me-column">
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 663" fill="none"><!--viewBox = "min-x min-y width height"-->
@@ -570,7 +566,7 @@ background-color:transparent;
 					</g>
 			</g>
 	</svg>
- <div class="gen-flex">
+ <div class="gen-flex2">
 <div class="container">
       <h1>Contact US</h1>
 <form method="post" action="//submit.form" onSubmit="return validateForm();">
