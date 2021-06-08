@@ -186,64 +186,47 @@ svg {
 			box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.11);
 		}
   }
- 
-.split {
-  height: 100%;
-  width: 50%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
+.contact-me-column{
+  float: left;
+  width: 42%;
+  padding:40px;
 }
 
-.left {
-	position: absolute;
-	text-align: center;
-   margin:5% 2%;
-     height: 100%;
-  width: 50%;
- 
-  
+/* Remove extra left and right margins, due to padding */
+.contact-me-row {  margin:1% 8%; background-color:transparent; }
+
+/* Clear floats after the columns */
+.contact-me-row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-.right {
-  position: absolute;
-   margin:30% 2%;
-   height: 100%;
-	 width:auto;
-	 
-	 float:left;
-}
-
-.centered {
-  position: absolute;
-  text-align: left;
-
-  
-}
-
-@media  (min-width: 680px) {
-
-.right {
-
-
-   height: 100%;
-position: absolute;
-    bottom: 0;	
-text-align:center;
-
-    
-}
-}
+/* Responsive columns */
+@media screen and (max-width: 700px) {
+  .contact-me-column {
+    width: auto;
+    display: block;
+    margin:0%;
+  }
+   .contact-me-row {  margin:0%;}
 
 }
-	}
+
+@media screen and (min-width: 760px) {
+  .contact-me-column {
+    width: 35%;
+    display: block;
+    margin:2%;
+  }
+   .contact-me-row {  margin:0%;}
+}
+
 
 </style>
 <body>
-	<div class="split left">
-<div class="centered">
+	<div class="contact-me-row">
+  <div class="contact-me-column">
 <div class="container d-flex justify-content-center align-items-center">
 	
 	<!-- // SVG
@@ -551,8 +534,7 @@ text-align:center;
 	</svg>
 	  </div>
 	   </div>
-<div class="split left">
-<div class="centered">
+<div class="contact-me-column">
 	<div class="container">
       <h1>Contact US</h1>
 <form method="post" action="//submit.form" onSubmit="return validateForm();">
