@@ -1,25 +1,31 @@
 <html>
 <style>
-.grid-container {
+.wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 5px;
-  background-color: #2196F3;
-  padding: 2px;
+  gap: 20px;
+  grid-template-areas:
+    "svg"
+    "form-part";
 }
-.grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 20px 0;
-  
+	.svg{
+	grid-area: svg;
+	}  
+.form-part{
+	grid-area: form-part;
+	}  
 
 /* Responsive layout - makes a one column-layout instead of two-column layout */
-@media screen and (max-width: 440px) {
-  
+@media (min-width: 500px) {
+  .wrapper {
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+      "svg" "form-part";
   }
-
-
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+  }
 }
-
 
 #envelope {
   animation: float 2s ease-in-out infinite;
@@ -194,8 +200,9 @@ element.style {
   /*form style end*/
 </style>
 <body>
+	<div class="wrapper">
 <div class="grid-container">
-
+<div class="svg">
   <div class="container d-flex justify-content-center align-items-center">
 	
 	
@@ -500,11 +507,11 @@ element.style {
 					</g>
 			</g>
 	</svg>
-	
+	</div>
   </div>
   <!--svg div end here-->
   <!--div for form-->
-    <div style="flex-grow: 3">
+   <div class="form-part">
   <div class="container">
 <form method="post" action="//submit.form" onSubmit="return validateForm();">
 
@@ -562,7 +569,7 @@ element.style {
 </div>
 </div>
 </form>
-
+</div>
 </div>
 <script>
 feather.replace();
