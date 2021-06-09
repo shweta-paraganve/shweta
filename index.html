@@ -1,26 +1,22 @@
 <html>
 <style>
-.flex-container {
-  display: flex;
-  align-items: stretch;
-  background-color: #f1f1f1;
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
 }
 
-.flex-container> div {
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
   
-  margin: 5px;
- 
- height: 100px;;
- 
-}
+  padding: 20px 0;
+  
 
 /* Responsive layout - makes a one column-layout instead of two-column layout */
 @media screen and (max-width: 440px) {
-  .flex-container {
-    flex-direction: row;
-    width:100%;
-    font-size: 15px;
-    text-align:justify;
+  
   }
 
 
@@ -200,8 +196,7 @@ element.style {
   /*form style end*/
 </style>
 <body>
-<div class="flex-container">
-  <div style="flex-grow: 1">
+<div class="grid-container">
 
   <div class="container d-flex justify-content-center align-items-center">
 	
