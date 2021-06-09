@@ -21,18 +21,6 @@
 
 
 /* Responsive layout - makes a one column-layout instead of two-column layout */
-/*@media screen and (max-width: 1200px) {
-  .flex-container {
-    flex-direction: column;
-    width:100%;
-    font-size: 20px;
-    text-align:justify;
-  }
-*/
-
-}
-
-/* Responsive layout - makes a one column-layout instead of two-column layout */
 @media screen and (max-width: 440px) {
   .flex-container {
     flex-direction: column;
@@ -41,8 +29,10 @@
     text-align:justify;
   }
 
-	
+
 }
+
+
 #envelope {
   animation: float 2s ease-in-out infinite;
 }
@@ -93,13 +83,7 @@
   }
   /*svg css end*/
   /*form style*/
-  
-.container {
-
- padding-top:2px;
  
-	
-}
 form{
 
     width:400px;
@@ -215,8 +199,9 @@ element.style {
   /*form style end*/
 </style>
 <body>
-	<div class="flex-container">
+<div class="flex-container">
 <div class="flex-item-left">
+
   <div class="container d-flex justify-content-center align-items-center">
 	
 	
@@ -527,7 +512,7 @@ element.style {
   <!--div for form-->
   <div class="flex-item-right">
   
-  <div class="container">
+  
 <form method="post" action="//submit.form" onSubmit="return validateForm();">
 
 <div style="display: flex; padding-bottom: 8px; max-width : 350px;">
@@ -584,10 +569,7 @@ element.style {
 </div>
 </div>
 </form>
-</div>
-</span>
-</div>
-</div>
+
 </div>
 <script>
 feather.replace();
