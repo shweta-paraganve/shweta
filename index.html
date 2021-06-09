@@ -1,24 +1,17 @@
 <html>
 <style>
-
 .flex-container {
-  width:100%;
-  position:relative;
   display: flex;
-  flex-direction: column;
-  font-size: 20px;
-  text-align:justify;
+  align-items: stretch;
+  background-color: #f1f1f1;
 }
 
-.flex-item-left {
-  padding:15px;
-  flex: 50%;
+.flex-container> div {
+  
+  margin: 5px;
+  text-align: center;
+  line-height: 100%;font-size: 30px;
 }
-
-.flex-item-right {
-  flex: 50%;
-}
-
 
 /* Responsive layout - makes a one column-layout instead of two-column layout */
 @media screen and (max-width: 440px) {
@@ -207,7 +200,7 @@ element.style {
 </style>
 <body>
 <div class="flex-container">
-<div class="flex-item-left">
+  <div style="flex-grow: 1">
 
   <div class="container d-flex justify-content-center align-items-center">
 	
@@ -517,8 +510,7 @@ element.style {
   </div>
   <!--svg div end here-->
   <!--div for form-->
-  <div class="flex-item-right">
-  
+    <div style="flex-grow: 3">
   <div class="container">
 <form method="post" action="//submit.form" onSubmit="return validateForm();">
 
