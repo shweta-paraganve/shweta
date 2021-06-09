@@ -193,19 +193,22 @@ element.style {
   	transition: 0.2s;
 }
 
-@media screen and (max-width:360px){
-.grid-container {
-  background:  linear-gradient(to left, #a8aaaa, #ffffff, #979999);
-  display: grid;
-  grid-gap: 20px 0px;
-  grid-template-columns: auto ;
-  padding: 10px;
-}
-
-.grid-item{
-  grid-column: 1 / 1;
-}
-}
+@media screen and (max-width:320px){
+    .grid-container {
+      width: 330px;
+      height: 50%;
+      background:  linear-gradient(to left, #a8aaaa, #ffffff, #979999);
+      display: grid;
+      grid-gap: 20px 0px;
+      grid-template-columns: auto ;
+      padding: 0px;
+    }
+   
+    .div1{
+      width: 100px;
+      grid-column: 1 / 1;
+    }
+    }
 /*@media screen and (max-width:320px){
  .grid-container {
   display: grid;
