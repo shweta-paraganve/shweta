@@ -1,33 +1,36 @@
 <html>
 <style>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
+.grid-container {
+  display: grid;
+  grid-template-columns:auto auto auto auto   ;
+  grid-gap: 100px;
+  
+
 }
 
-/* Create two equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 50%;
-  padding: 10px;
-  height: 1000px; /* Should be removed. Only for demonstration */
-}
+.grid-container > div  {/*grid-container > div for  black lines out*/
+ 
+  border: 1px solid green;
+  width: 625px; /*620*/
+  float:left;}
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column{
-    width: 100%;
-  }
-}
+/*svg css*/
+.div1{   /*first column*/
+margin-top:10px;
+height:500px;
 
+}
+.div2{  /* secod container*/
+	margin-left:630px;/*second container adjust left*/
+	margin-top:-482px;
+	
+	padding-right:80px;
+	
+}
+#envelope {
+  animation: float 2s ease-in-out infinite;
+}
 
 #star1, #star2, #star3, #star4, #star5, #star6 {
   animation: blink 1s ease-in-out infinite;
@@ -75,21 +78,22 @@
   }
   /*svg css end*/
   /*form style*/
-	
-		.container {
+  
+.container {
 
  padding-top:2px;
  
 	
 }
-	
 form{
 
     width:400px;
     margin-top:20px;
-    margin-left:10px;/*form left margin in div2 container*/
-    margin-right:10px;/*adjust margin for gap between form and container */
-    border: 1px solid transparent;
+    margin-left:120px;/*form left margin in div2 container*/
+	margin-right:10px;/*adjust margin for gap between form and container */
+	border: 1px solid transparent;
+	/*padding-top:20px;*/
+    /*margin-right:30px;*/
     border-radius:25px;
     border-width:5px;
     border-style:solid;
@@ -189,16 +193,43 @@ element.style {
   	color: #ffffff;
   	transition: 0.2s;
 }
+@media screen and (max-width: 480px) {
+ .grid-container {
+  display: grid;
+  grid-template-rows: 700px 500px;
+  grid-gap: 100px;
+  
 
+}
 
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 700px; /* Should be removed. Only for demonstration */
+}
 
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
 }
   /*form style end*/
 </style>
 <body>
-	<div class="row">
-  <div class="column" style="background-color:#aaa;">
-<div class="svg">
+
+<div class="row">
+  <div class="column" >
+  <!--div for svg-->
+  
   <div class="container d-flex justify-content-center align-items-center">
 	
 	
@@ -208,7 +239,7 @@ element.style {
   -- Note: need to use inline svg to manipulate its components
   ------------------------------------------------------------>
 
-	<svg xmlns="http://www.w3.org/2000/svg" viewbox="-70 -80  990 663" fill="none"  ><!--0 0 7-90 563-->
+	<svg xmlns="http://www.w3.org/2000/svg" viewbox="-100 -120  990 763" fill="none"  ><!--0 0 7-90 563-->
 			<g id="Image">
 					<g id="g14">
 							<g id="g16">
@@ -503,12 +534,10 @@ element.style {
 					</g>
 			</g>
 	</svg>
-	</div>
+	
   </div>
-  <!--svg div end here-->
-  <!--div for form-->
-    <div class="column" style="background-color:#bbb;">
-
+ <div class="column" >
+  
   <div class="container">
 <form method="post" action="//submit.form" onSubmit="return validateForm();">
 
@@ -566,6 +595,9 @@ element.style {
 </div>
 </div>
 </form>
+</div>
+</span>
+</div>
 </div>
 </div>
 <script>
