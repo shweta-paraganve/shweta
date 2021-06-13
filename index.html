@@ -16,10 +16,14 @@
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 650px) {
-  .column {
+@media screen and (max-width: 600px) {
+  .svg {
     width: 100%;
   }
+	.form{
+	margin-left:100px;
+	margin-top:600px;
+	}
 	
 	.container{
 	margin-top:10px;
@@ -199,6 +203,7 @@ element.style {
 <body>
 <div class="row">
   <div class="column" >
+	  <div class="svg">
   <!--div for svg-->
   
   <div class="container d-flex justify-content-center align-items-center">
@@ -505,10 +510,10 @@ element.style {
 					</g>
 			</g>
 	</svg>
-	
+</div>	
   </div>
  <div class="column" >
-  
+  <div class="form">
   <div class="container">
 <form method="post" action="//submit.form" onSubmit="return validateForm();">
 
@@ -586,7 +591,7 @@ open = false;
 }
 </script>
   </div>
-  
+</div>  
 </div>
 
 </body>
