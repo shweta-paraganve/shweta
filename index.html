@@ -1,30 +1,33 @@
 <html>
 <style>
-
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr ;
-  grid-gap: 5px;
-  
-	border:1px solid black;
-  padding: 5px;
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
 }
 
-.grid-container > div {
-  border:1px solid black;
- 
-  padding: 20px 0;
-  
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
 }
 
-/* Responsive layout - makes a one column-layout instead of two-column layout */
-
-
-@media (min-width: 700px) {
-	}
-#envelope {
-  animation: float 2s ease-in-out infinite;
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
 
 #star1, #star2, #star3, #star4, #star5, #star6 {
   animation: blink 1s ease-in-out infinite;
@@ -195,8 +198,8 @@ element.style {
   /*form style end*/
 </style>
 <body>
-	<div class="wrapper">
-<div class="grid-container">
+	<div class="row">
+  <div class="column" style="background-color:#aaa;">
 <div class="svg">
   <div class="container d-flex justify-content-center align-items-center">
 	
@@ -506,7 +509,8 @@ element.style {
   </div>
   <!--svg div end here-->
   <!--div for form-->
-   <div class="form-part">
+    <div class="column" style="background-color:#bbb;">
+
   <div class="container">
 <form method="post" action="//submit.form" onSubmit="return validateForm();">
 
