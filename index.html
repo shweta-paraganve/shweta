@@ -1,17 +1,14 @@
-<html>
-	<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-	#contact_us{overflow:hidden;}
 
-#contact_us h1{
-  font-size:40px;
-  text-align:center;
-  color:cyan;
-}
-/* Float four columns side by side */
+<html>
+<head>
+<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+</head>
+<style>
 .contact-me-column{
-  margin-left:30px;
+  float: left;
   width: 42%;
   padding:40px;
 }
@@ -46,10 +43,134 @@
    .contact-me-row {  margin:0%;}
 }
 
-/***********************************************************/
 
-<!--svg-->
-	svg {
+
+.container {
+
+  margin-bottom:5px;
+	
+	
+}
+
+.container h1 {
+	border: 1px solid transparent;
+  	text-align: center;
+  	color: #5b6574;
+	margin-top:-510px;/*-410*/
+	margin-left: 650px;
+	margin-right: 100px;
+  	font-size: 30px;
+  	padding: 10px 0 10px 0;
+    font-size:2em;
+    text-transform:uppercase;
+    padding: 1.5%;
+    text-align: center;
+}
+
+
+form{
+    margin-top: 4px;/*start of form that first name above paddding*/
+	border: 1px solid transparent;
+    padding-left:5px;
+	padding-top:20px;
+	margin-left: 700px;
+	margin-right: 100px;
+    border-radius:25px;
+    border-width:5px;
+    border-style:solid;
+	background-color: #ffffff;
+background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+}
+.form-control{
+    width:600px;
+    background:transparent;
+    border:none;
+    outline:none;
+    border-bottom:1px solid grey;
+    color:#000000;
+    font-size: 18px;
+    margin-bottom:8px;
+	border: 1px solid transparent;
+	background-color: #f2f6f8;
+	border-radius: 2rem;
+    border: none;
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.11);
+		
+}
+input{
+    height:45px;
+	
+
+}
+/* Add styles to 'input' and 'textarea' selectors */
+
+input[type=text],input[type=email], textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #f2f6f8;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 10px;
+    resize: vertical;
+	 border: none;
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.11);
+	
+}
+
+input[type=submit] {
+	background: #64B5F6;
+	margin: 0 auto;
+	outline: 0;
+	color: white;
+	border: 0;
+	padding: 12px 24px;
+	border-radius: 4px;
+	transition: all ease-in-out 0.1s;
+	position: relative;
+	display: inline-block;
+	text-align: center;
+}
+
+
+/* Style 'hover' property */
+
+input[type=submit]:hover {
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    margin: 8px 10px 12px;
+    background-color: #36096d;
+background-image: linear-gradient(315deg, #36096d 0%, #37d5d6 74%);
+}
+
+/* Align items to center of the 'div' with the class 'center' */
+.center {
+	text-align: center;
+}
+
+element.style {
+    background-color: #e3f2fd;
+    color: #e3f2fd;
+    z-index: 2147483647;
+}
+* {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size:large;
+}
+
+.container form input[type="submit"] {
+  	width: 100%;
+  	padding: 20px;
+ 	margin-top: 5px;
+	 height:15px;
+    background-image: linear-gradient(315deg, #36096d 0%, #37d5d6 74%);
+  	border: 0;
+  	cursor: pointer;
+  	font-weight: bold;
+	  font-size:large;
+  	color: #ffffff;
+  	transition: 0.2s;
+}
+svg {
 	height: 23rem;
 	margin-right: 4rem;
 	display: block;
@@ -108,91 +229,32 @@
 			box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.11);
 		}
   }
-/* Add styles to 'container' class */
-
-.contact-form {
-	padding: 10px;
-  	width:auto;
-  	background-color: #E3F2FD;
-  	box-shadow: 5px 5px 8px cyan;
-  	margin:4px auto;
-	border-radius: 10px;
-	text-align:left;
+ .contact-me-column{
+  float: left;
+  width: 50%;
+  padding:40px;
 }
 
-
-/* Add styles to 'label' selector */
-
-label {
-	font-size: 0.85em;
-	margin-left: 12px;
-}
-
-/* Add styles to 'input' and 'textarea' selectors */
-
-input[type=text],input[type=email], textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 0px;
-    margin-bottom: 16px;
-    resize: vertical;
-}
-
-/* Add styles to show 'focus' of selector */
-
-input[type=text]:focus,input[type=email]:focus, textarea:focus {
-	border: 1px solid green;
-}
+/* Remove extra left and right margins, due to padding */
+/*5 for top botton and 8 for left and right*/
+.contact-me-row { float: right; margin:5% 8%; background-color:transparent; }
 
 
-input[type=submit]:hover {
-	background: #2196F3;
-}
-
-/* Align items to center of the 'div' with the class 'center' */
-.ct-me-center {
-	text-align: center;
-}*/
-
-element.style {
-    background-color: #e3f2fd;
-    color: #e3f2fd;
-    z-index: 2147483647;
-}
-
-.contact-form form input[type="submit"] {
-  	width: 100px;
-        border-radius:40px;
-  	padding: 15px;
- 	margin-top: 20px;
-  	background-color: #3274d6;
-  	border: 0;
-  	cursor: pointer;
-  	font-weight: bold;
-  	color: #ffffff;
-  	transition: background-color 0.2s;
-}
-.contact-form form input[type="submit"]:hover{
-  background-color:green;
-}
 </style>
 <body>
-	<section id="contact_us"><!--contact us id name-->
+	<section id="ki-message">
      <div class="item" > 
-<h1 style="margin-top:5%;margin-bottom:0%;">CONTACT US..</h1>
+
 <div class="contact-me-row">
   <div class="contact-me-column">
-  <!--svg part-->
-	  <div class="container d-flex justify-content-center align-items-center">
+<div class="container d-flex justify-content-center align-items-center">
 	
 	<!-- // SVG
 					from: https://www.freepik.com/free-vector/new-message-concept-landing-page_5777076.htm 
   -------------------------------------------------------------
   -- Note: need to use inline svg to manipulate its components
-  ------------------------------------------------------------
+  ------------------------------------------------------------>
+   
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 663" fill="none"><!--viewBox = "min-x min-y width height"-->
 			<g id="Image">
 					<g id="g14">
@@ -488,29 +550,35 @@ element.style {
 					</g>
 			</g>
 	</svg>
-  </div>
-	<div class="contact-me-column"><!--contact form class-->
-<div class="contact-form">
-	<form method="post" action="//submit.form" onSubmit="return validateForm();">
+</div>
+	  <div class="contact-me-column">
+<div class="container">
+      <h1>Contact US</h1>
+<form method="post" action="//submit.form" onSubmit="return validateForm();">
+<div style="max-width: 600px;">
+</div>
+<div style="display: flex; padding-bottom: 8px; max-width : 350px;">
+<div style=" margin-left: 1%; margin-right: 1%; max-width:450px;"></h1>Name<br/>
+<input type="text" id="data_5" name="data_5"  style="max-width : 450px;"  class="form-control" ; required/>
+</div>
 
-<label for="first_name"> Name</label>
-<input type="text" id="data_5" name="data_5"  class="form-control" / required>
-<br>
-
-
-<label for="Email">Email</label>
-<input type="text" id="data_21" name="data_21"  class="form-control"/ required>
-<br>
-<label for="Mobile_number">Mobile Number</label>
-<input type="text" id="data_8" name="data_8" class="form-control"/ required>
-<br>
-<label for="question_1">Do  you have own shop?</label>
+</div>
+<div style="padding-bottom: 8px;margin-left: 0%; margin-right: 1%; max-width: 400px;">Email<br/>
+<input type="text" id="data_7" name="data_7" style="max-width : 450px;" class="form-control"/>
+</div>
+<div style="padding-bottom: 8px;margin-left: 0%; margin-right: 1%; max-width: 400px;">Location<br/>
+<input type="text" id="data_21" name="data_21" style="max-width : 450px;" class="form-control"/>
+</div>
+<div style="padding-bottom: 8px;margin-left: 0%; margin-right: 1%; max-width: 400px;">Mobile Number<br/>
+<input type="text" id="data_8" name="data_8" style="max-width : 450px;" class="form-control"/>
+</div>
+<div style="padding-bottom: 8px;margin-left: 0%; margin-right: 1%; max-width: 400px; ">Do  you have own shop?<br/>
 <span><input type="radio" style="vertical-align: middle; margin: 0px;" id="data_22_0" name="data_22"  value="Option1"/> Yes</span><br/>
 <span><input type="radio" style="vertical-align: middle; margin: 0px;" id="data_22_1" name="data_22" value="Option2"/> No</span><br/>
-<br>
+</div>
 
-<label for="question_2" >What type of bag would you like to order?</label>
-<select id="data_16" name="data_16"   class="form-control" /required>
+<div style="padding-bottom: 8px;margin-left: 0%; margin-right: 1%;  max-width: 400px; min-height: 1rem;" >What type of bag would you like to order?<br/>
+<select id="data_16" name="data_16" style="max-width : 400px;"     class="form-control" >
 <option>     </option>
 <option>Paper Pouch</option>
 <option>Handled Paper Bag</option>
@@ -518,54 +586,44 @@ element.style {
 <option>Pizza Bag</option>
 <option>Other</option>
 </select>
-</br>
-	
-<label for="question_3" >If other then please mention here</label>
-<input type="text" id="data_24" name="data_24"  class="form-control"/required>
-<br>
-	
-<label for="quantity">Quantity    (minimum 1000*)</label>
-<input type="text" id="data_24" name="data_24"  class="form-control"/required>
-<br>
-
-<label for="message">Message</label><br>
-<textarea name="Comments"  class="form-control" /required></textarea>
-<div class="center">
-	
-<div class="ct-me-center"><input name="skip_Submit" value="Submit" type="submit"/>
-	</div>
 </div>
+<div style="padding-bottom: 8px;margin-left: 0%; margin-right: 1%; max-width: 400px;">If other then please mention here<br/>
+<input type="text" id="data_24" name="data_24" style="max-width : 450px;" class="form-control"/>
+</div>
+<div style="padding-bottom: 8px;margin-left: 0%; margin-right: 1%; max-width: 400px;">Quantity    (minimum 1000*)<br/>
+<input type="text" id="data_24" name="data_24" style="max-width : 450px;" class="form-control"/>
+
+</select>
+</div>
+<div >
+
+<div style="padding-bottom: 8px;margin-left: 0%; margin-right: 1%; max-width: 400px;">Message<br/>
+<textarea name="Comments" rows="5" cols="45" style="width:100%;max-width:450px;"></textarea>
 
 
+
+</div>
+<div class="gradient" style="padding-bottom: 20px; width:100%; max-width:400px;" ><input name="skip_Submit" value="Submit" type="submit"/></div>
+<div>
+<div class="center"><span style="font-size:0px;" ><a href="https://www.100forms.com" id="lnk100" title="form to email"></a></span></div>
 <script src="https://www.100forms.com/js/FORMKEY:XKENU9JEUHJC" type="text/javascript"></script>
-	<a href="https://www.100forms.com" id="lnk100" title="form to email" style="font-size:0px;"></a></span></div>
 </div>
-
+</div>
 </form>
 
-<script type="text/javascript">
-function validateForm() {
-if (isEmpty(document.getElementById('data_5').value.trim())) {
-alert('name is required!');
-return false;
-}
+<script>
+feather.replace();
+let closeForm = function() {
+let form = document.getElementById('contactForm');
+let open = true;
 
-if (isEmpty(document.getElementById('data_21').value.trim())) {
-alert('Email is required!');
-return false;
-}
-if (!validateEmail(document.getElementById('data_21').value.trim())) {
-alert('Email must be a valid email address!');
-return false;
-}
+form.style.display = "block";
 
-function isEmpty(str) { return (str.length === 0 || !str.trim()); }
-function validateEmail(email) {
-var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z]{2})?)$/i;
-return isEmpty(email) || re.test(email);
+if(open == true){
+form.style.display = "none";
+open = false;
+} 
 }
 </script>
-	</div>
-	     </section>
 </body>
 </html>
